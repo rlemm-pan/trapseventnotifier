@@ -1,6 +1,6 @@
 # Traps Event Notifier (TEN)
 
-This app was written for Palo Alto Networks to gather Malware Events from the Traps Cloud Service and send Email Notifications.  
+This app was written for Palo Alto Networks to gather Malware Events from the Traps Cloud Service and send Email Notifications.  PhantomJS is required for this script to work.  
 ## Install:
   
   pip install selenium
