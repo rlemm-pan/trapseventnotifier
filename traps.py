@@ -20,7 +20,7 @@ phantomJS_path = ''
 
 parser = argparse.ArgumentParser(add_help=True,
                     formatter_class=RawTextHelpFormatter,
-                    description='Usage Example: \n\npython traps.py --traps mytrapsservicename --events 20 --emailuserid anyone@anywhere.com --emailreceiver anyone@anywhere.com --trapsuser myusername@paloaltonetworks.com --mailserver my.mailsever.com --mailserverport 465')
+                    description='Usage Example: \n\npython mech.py --traps mytrapsservicename --events 20 --emailuserid anyone@anywhere.com --emailreceiver anyone@anywhere.com --trapsuser myusername@paloaltonetworks.com --mailserver my.mailsever.com --mailserverport 465')
 
 parser.add_argument("--traps", action="store",
                     help="Traps Service Name")
@@ -72,11 +72,11 @@ if traps_username == '':
 if traps_cloud_name == '':
     traps_cloud_name = raw_input("Please enter your Traps Service Name: ")
 if number_of_events == '':
-    number_of_events = raw_input("\nDevices will require valid login credentials.\nPlease enter your Traps username: ")
+    number_of_events = raw_input("Please enter number of events: ")
 if mail_server == '':
     mail_server = raw_input("Please enter your Mail Server name/IP: ")
 if mail_server_port == '':
-    mail_server_op = float(raw_input("Please enter your Mail Server Port: "))
+    mail_server_port = float(raw_input("Please enter your Mail Server Port: "))
 if phantomJS_path == '':
     phantomJS_path = float(raw_input("Please enter the path to PhantomJS Web Client: "))
 if mail_password == '':
