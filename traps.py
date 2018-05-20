@@ -78,7 +78,7 @@ if mail_server == '':
 if mail_server_port == '':
     mail_server_port = float(raw_input("Please enter your Mail Server Port: "))
 if phantomJS_path == '':
-    phantomJS_path = float(raw_input("Please enter the path to PhantomJS Web Client: "))
+    phantomJS_path = raw_input("Please enter the path to PhantomJS Web Client: ")
 if mail_password == '':
     mail_password = getpass.getpass(prompt='Please enter your mail password: ')
 if traps_password == '':
