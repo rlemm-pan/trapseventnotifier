@@ -15,7 +15,7 @@ traps_username = ''
 traps_password = ''
 to = []
 mail_server = ''
-mail_server_port = 0
+mail_server_port = ''
 phantomJS_path = ''
 
 parser = argparse.ArgumentParser(add_help=True,
@@ -67,6 +67,8 @@ if args.phantompath:
 
 if mail_user == '':
     mail_user = raw_input("\nValid login credentials required.\nPlease enter your Email username: ")
+if to == []:
+    to = [raw_input("Please enter receivers Email Address: ")]
 if traps_username == '':
     traps_username = raw_input("\nValid login credentials required.\nPlease enter your Traps username: ")
 if traps_cloud_name == '':
@@ -76,7 +78,7 @@ if number_of_events == '':
 if mail_server == '':
     mail_server = raw_input("Please enter your Mail Server name/IP: ")
 if mail_server_port == '':
-    mail_server_port = float(raw_input("Please enter your Mail Server Port: "))
+    mail_server_port = int(raw_input("Please enter your Mail Server Port: "))
 if phantomJS_path == '':
     phantomJS_path = raw_input("Please enter the path to PhantomJS Web Client: ")
 if mail_password == '':
