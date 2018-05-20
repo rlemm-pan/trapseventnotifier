@@ -15,7 +15,7 @@ traps_username = ''
 traps_password = ''
 to = []
 mail_server = ''
-mail_port = 0
+mail_server_port = 0
 phantomJS_path = ''
 
 parser = argparse.ArgumentParser(add_help=True,
