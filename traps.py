@@ -20,13 +20,13 @@ phantomJS_path = ''
 
 parser = argparse.ArgumentParser(add_help=True,
                     formatter_class=RawTextHelpFormatter,
-                    description='Usage Example: \n\npython mech.py --traps mytrapsservicename --events 20 --emailuserid anyone@anywhere.com --emailreceiver anyone@anywhere.com --trapsuser myusername@paloaltonetworks.com --mailserver my.mailsever.com --mailserverport 465')
+                    description='Usage Example: \n\npython traps.py --traps mytrapsservicename --events 20 --emailuserid anyone@anywhere.com --emailreceiver anyone@anywhere.com --trapsuser myusername@paloaltonetworks.com --mailserver my.mailsever.com --mailserverport 465')
 
 parser.add_argument("--traps", action="store",
                     help="Traps Service Name")
 
 parser.add_argument("--events", action="store",
-                    help="Number of Events")
+                    help="Number of Events.  Max is 284")
 
 parser.add_argument("--emailuserid", action="store",
                     help="Username for Email Account")
@@ -133,4 +133,5 @@ Subject: %s
 %s
 """ % (sent_from, ", ".join(to), subject, body)
 
+print email_text
 send_email()
